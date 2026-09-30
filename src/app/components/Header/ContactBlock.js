@@ -3,7 +3,6 @@ import Image from "next/image";
 export default function ContactBlock() {
   return (
     <div className="flex items-center gap-6">
-      {/* Соцсети — видны ВСЕГДА (мобилка, планшет, десктоп) */}
       <div className="flex items-center gap-3">
         <a
           href="https://wa.me/78123363636"
@@ -25,9 +24,9 @@ export default function ContactBlock() {
         </a>
       </div>
 
-      {/* Телефон и кнопка — скрыты на мобилке, видны от 768px (md:) */}
+
       <div className="hidden items-center gap-6 md:flex">
-        {/* Телефон */}
+        
         <a
           href="tel:+78123363636"
           className="text-[15px] font-medium text-white transition-colors hover:text-brand-blue"
@@ -35,7 +34,7 @@ export default function ContactBlock() {
           (812) 336 36 36
         </a>
 
-        {/* Кнопка */}
+        
         <button
           type="button"
           className="

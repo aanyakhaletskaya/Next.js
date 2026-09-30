@@ -12,7 +12,7 @@ const links = [
 export default function MobileMenu({ isOpen, onClose }) {
   return (
     <>
-      {/* Затемнение фона */}
+
       <div
         onClick={onClose}
         className={`
@@ -21,7 +21,7 @@ export default function MobileMenu({ isOpen, onClose }) {
         `}
       />
 
-      {/* Панель меню — выезжает справа */}
+      
       <aside
         className={`
           fixed top-0 right-0 z-50 h-full w-[320px] max-w-[85%] bg-brand-dark
@@ -29,7 +29,7 @@ export default function MobileMenu({ isOpen, onClose }) {
           ${isOpen ? "translate-x-0" : "translate-x-full"}
         `}
       >
-        {/* Кнопка закрытия */}
+        
         <div className="flex justify-end p-4">
           <button
             type="button"
@@ -48,7 +48,7 @@ export default function MobileMenu({ isOpen, onClose }) {
           </button>
         </div>
 
-        {/* Навигация */}
+        
         <nav className="px-6 py-4">
           <ul className="flex flex-col gap-4">
             {links.map((link) => (
@@ -65,7 +65,7 @@ export default function MobileMenu({ isOpen, onClose }) {
           </ul>
         </nav>
 
-        {/* Контакты */}
+        
         <div className="mt-6 flex flex-col gap-4 border-t border-white/10 px-6 pt-6">
           <div className="flex items-center gap-4">
             <a href="https://wa.me/78123363636" aria-label="WhatsApp">
