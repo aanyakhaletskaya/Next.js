@@ -4,7 +4,7 @@ export default function OnlineCard() {
   return (
     <div className="relative flex flex-col items-center justify-center md:min-h-[300px] md:overflow-hidden md:rounded-[40px] md:bg-[#0d0d0d] md:p-6 md:text-white lg:min-h-[420px] lg:p-8">
 
-      {/* Планета — только от 768px */}
+      
       <div className="pointer-events-none absolute inset-x-0 bottom-12 z-0 hidden md:block lg:bottom-0">
         <Image
           src="/images/planet.png"
@@ -16,10 +16,10 @@ export default function OnlineCard() {
         />
       </div>
 
-      {/* Контент поверх */}
+      
       <div className="relative z-10 flex w-full flex-col items-center">
 
-        {/* Логотип + заголовок — только от 768px */}
+        
         <div className="hidden items-center justify-center gap-3 md:flex lg:gap-4">
           <Image
             src="/icons/logo-online.svg"
@@ -35,10 +35,10 @@ export default function OnlineCard() {
           </h2>
         </div>
 
-        {/* Цифры: на мобилке — просто текст, на планшете+ — круги */}
+        
         <div className="flex w-full items-start justify-between gap-2 px-2 md:mt-8 md:justify-center md:gap-3 md:px-0 lg:mt-12 lg:gap-6">
 
-          {/* Круг 1 — на мобилке первым: >20 */}
+          
           <div className="order-1 flex flex-col items-center md:order-3 md:h-[100px] md:w-[100px] md:-translate-y-4 md:justify-center md:rounded-full md:bg-white md:text-brand-dark lg:h-[140px] lg:w-[140px] lg:-translate-y-6">
             <span className="font-benzin text-[18px] font-bold text-white md:text-[20px] md:text-brand-dark lg:text-[28px]">
               &gt;20
@@ -48,7 +48,7 @@ export default function OnlineCard() {
             </span>
           </div>
 
-          {/* Круг 2 — синий */}
+          
           <div className="order-2 flex flex-col items-center md:h-[130px] md:w-[130px] md:justify-center md:rounded-full md:bg-brand-blue md:text-white lg:h-[180px] lg:w-[180px]">
             <span className="font-benzin text-[20px] font-bold text-white md:text-[26px] lg:text-[36px]">
               &gt;100
@@ -58,7 +58,7 @@ export default function OnlineCard() {
             </span>
           </div>
 
-          {/* Круг 3 — на мобилке последним: >50 */}
+          
           <div className="order-3 flex flex-col items-center md:order-1 md:h-[100px] md:w-[100px] md:-translate-y-4 md:justify-center md:rounded-full md:bg-white md:text-brand-dark lg:h-[140px] lg:w-[140px] lg:-translate-y-6">
             <span className="font-benzin text-[18px] font-bold text-white md:text-[20px] md:text-brand-dark lg:text-[28px]">
               &gt;50

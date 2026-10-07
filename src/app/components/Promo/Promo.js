@@ -9,7 +9,7 @@ export default function Promo() {
       <div className="mx-auto flex max-w-[900px] flex-col gap-3 px-3 lg:max-w-[1180px]">
         <MainCard />
 
-        {/* Мобилка: столбик. Планшет+: 2 колонки */}
+        
         <div className="flex flex-col gap-3 md:grid md:grid-cols-[1fr_2fr]">
           <div className="flex flex-col gap-3">
             <CouplesCard />

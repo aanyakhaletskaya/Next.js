@@ -24,7 +24,7 @@ export default function MainCard() {
         </button>
       </div>
 
-      {/* SVG-иллюстрация — только от 768px и выше */}
+      
       <div className="pointer-events-none absolute bottom-0 right-0 z-0 hidden w-[450px] max-w-[80%] md:block lg:w-[600px]">
         <Image
           src="/images/orbits.svg"

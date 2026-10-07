@@ -24,9 +24,7 @@ export default function ContactBlock() {
         </a>
       </div>
 
-
       <div className="hidden items-center gap-6 md:flex">
-        
         <a
           href="tel:+78123363636"
           className="text-[15px] font-medium text-white transition-colors hover:text-brand-blue"
@@ -34,14 +32,9 @@ export default function ContactBlock() {
           (812) 336 36 36
         </a>
 
-        
         <button
           type="button"
-          className="
-            rounded-full px-5 py-2 text-[14px] transition-opacity hover:opacity-90
-            bg-white text-brand-dark font-medium
-            lg:bg-brand-blue lg:text-brand-dark lg:font-bold
-          "
+          className="rounded-full px-5 py-2 text-[14px] transition-opacity hover:opacity-90 bg-white text-brand-dark font-medium lg:bg-brand-blue lg:text-brand-dark lg:font-bold"
         >
           Купить билет
         </button>
