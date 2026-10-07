@@ -6,22 +6,22 @@ import { events } from "@/app/data/events";
 
 export default function Events() {
   return (
-    <section className="w-full bg-brand-dark py-16">
-      <div className="mx-auto flex max-w-[1180px] flex-col gap-8 px-3">
-        {/* Заголовок со звёздочками */}
+    <section className="w-full bg-brand-dark py-10 md:py-16">
+      <div className="mx-auto flex max-w-[1000px] flex-col gap-6 px-3 lg:max-w-[1180px]">
         <EventsTitle />
-
-        {/* Табы */}
         <Tabs />
 
-        {/* Список карточек */}
-        <div className="flex flex-col gap-6">
-          {events.map((event) => (
-            <EventCard key={event.id} event={event} />
+        <div className="flex flex-col gap-10">
+          {events.map((event, index) => (
+            <div
+              key={event.id}
+              className={index === 0 ? "" : "hidden md:block"}
+            >
+              <EventCard event={event} />
+            </div>
           ))}
         </div>
 
-        {/* Кнопка «Показать ещё» */}
         <ShowMoreButton />
       </div>
     </section>
