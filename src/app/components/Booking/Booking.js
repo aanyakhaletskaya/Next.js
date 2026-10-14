@@ -72,12 +72,12 @@ export default function Booking() {
       <div className="mx-auto flex max-w-[1000px] flex-col gap-10 px-3 lg:max-w-[1180px]">
         {/* Заголовок */}
         <h2 className="mx-auto max-w-[900px] text-center font-benzin text-[15px] font-black uppercase leading-[1.15] text-white md:text-[34px] lg:text-[48px]">
-  <span className="whitespace-nowrap">Ваш билет в космос —</span>
-  <br />
-  <span className="whitespace-nowrap">быстрая запись на</span>
-  <br />
-  <span className="whitespace-nowrap">экскурсию</span>
-</h2>
+            <span className="whitespace-nowrap">Ваш билет в космос —</span>
+            <br />
+            <span className="whitespace-nowrap">быстрая запись на</span>
+            <br />
+            <span className="whitespace-nowrap">экскурсию</span>
+        </h2>
 
         {/* Форма + картинка */}
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-12">
