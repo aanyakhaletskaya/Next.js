@@ -79,17 +79,17 @@ export default function Booking() {
             <span className="whitespace-nowrap">экскурсию</span>
         </h2>
 
-        {/* Форма + картинка */}
+        
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-12">
           
-          {/* Левая — форма */}
+          
           <form onSubmit={handleSubmit} className="flex flex-col gap-4">
             <p className="font-gilroy text-[13px] leading-[1.5] text-white/80 md:text-[14px]">
               Запишитесь на экскурсию в планетарий. Просто укажите ваше имя,
               электронную почту и дату, и мы свяжемся с вами для подтверждения
             </p>
 
-            {/* Имя */}
+            
             <div className="flex flex-col gap-1">
               <input
                 type="text"
@@ -109,7 +109,7 @@ export default function Booking() {
               )}
             </div>
 
-            {/* Телефон */}
+            
             <div className="flex flex-col gap-1">
               <input
                 type="tel"
@@ -129,7 +129,7 @@ export default function Booking() {
               )}
             </div>
 
-            {/* Дата */}
+            
             <div className="flex flex-col gap-1">
               <div className="relative">
                 <select
@@ -181,7 +181,7 @@ export default function Booking() {
               )}
             </div>
 
-            {/* Кнопка */}
+            
             <button
               type="submit"
               className="rounded-full bg-brand-blue py-4 font-gilroy text-[16px] font-bold text-white transition-opacity hover:opacity-90"
@@ -189,13 +189,13 @@ export default function Booking() {
               Отправить
             </button>
 
-            {/* Подпись */}
+            
             <p className="font-gilroy text-[11px] text-white/50">
               *Нажимая на кнопку, вы соглашаетесь с политикой конфиденциальности.
             </p>
           </form>
 
-          {/* Правая — картинка */}
+          
           <div className="h-[400px] overflow-hidden rounded-[40px] md:h-[500px] lg:h-[350px]">
             <img
               src="/images/booking/astronauts.png"

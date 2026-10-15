@@ -27,7 +27,7 @@ export default function FooterSubscribe() {
   return (
     <div className="flex flex-col items-center gap-6 md:items-stretch lg:flex-row lg:items-center lg:justify-between">
       
-      {/* Политика — слева, одна строка */}
+    
       <a
         href="#"
         className="order-2 whitespace-nowrap text-center font-gilroy text-[12px] text-white/60 transition-colors hover:text-white lg:order-1 lg:text-left"
@@ -35,12 +35,12 @@ export default function FooterSubscribe() {
         Политика конфиденциальности
       </a>
 
-      {/* Форма подписки */}
+      
       <form
         onSubmit={handleSubmit}
         className="order-1 flex w-full flex-col gap-4 rounded-[40px] bg-white p-6 md:gap-5 lg:order-2 lg:w-auto lg:flex-row lg:items-center lg:gap-4 lg:rounded-full lg:py-3 lg:pl-8 lg:pr-3 lg:ml-auto"
       >
-        {/* Заголовок — сверху на мобилке и планшете, слева на десктопе */}
+        
         <p className="font-benzin text-[20px] font-black uppercase leading-[1.1] text-brand-blue md:text-[22px] lg:text-[18px] lg:whitespace-nowrap lg:leading-tight xl:text-[20px]">
           Подписаться на рассылку
         </p>

@@ -13,7 +13,7 @@ export default function Reviews() {
       <div className="mx-auto flex max-w-[1000px] flex-col gap-6 px-3 md:gap-8 lg:max-w-[1180px]">
         <ReviewsTitle />
 
-        {/* ====== МОБИЛКА: одна карточка + кнопки снизу ====== */}
+        
         <div className="flex flex-col gap-4 md:hidden">
           <div className="overflow-hidden rounded-[53px]">
             <img
@@ -23,7 +23,7 @@ export default function Reviews() {
             />
           </div>
 
-          {/* Кнопки ← → — маленькие */}
+          
           <div className="flex items-center justify-center gap-3">
             <button
               type="button"
@@ -47,7 +47,7 @@ export default function Reviews() {
           </div>
         </div>
 
-        {/* ====== ПЛАНШЕТ и ДЕСКТОП: сетка ====== */}
+        
         <div className="hidden grid-cols-3 gap-4 md:grid lg:grid-cols-4 lg:gap-6">
           {cards.map((src, index) => (
             <div

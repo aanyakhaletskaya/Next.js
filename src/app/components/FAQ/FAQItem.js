@@ -2,7 +2,7 @@ export default function FAQItem({ item, isOpen, isActive, onToggle }) {
   return (
     <div className="flex flex-col gap-4">
       
-      {/* Вопрос — белая плашка */}
+      
       <button
   type="button"
   onClick={onToggle}
@@ -18,19 +18,19 @@ export default function FAQItem({ item, isOpen, isActive, onToggle }) {
           {item.question}
         </span>
 
-        {/* Кружок */}
+        
         <span
           className={`flex h-[50px] w-[50px] shrink-0 items-center justify-center rounded-full transition-colors ${
             isOpen ? "bg-brand-dark" : "bg-brand-blue"
           }`}
         >
           {isOpen ? (
-            /* Минус */
+            
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
               <path d="M5 12h14" stroke="white" strokeWidth="2" strokeLinecap="round" />
             </svg>
           ) : (
-            /* Плюс */
+            
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
               <path d="M12 5v14M5 12h14" stroke="white" strokeWidth="2" strokeLinecap="round" />
             </svg>
@@ -38,7 +38,7 @@ export default function FAQItem({ item, isOpen, isActive, onToggle }) {
         </span>
       </button>
 
-      {/* Ответ — только если открыт */}
+      
       {isOpen && (
         <p className="px-8 font-gilroy text-[13px] leading-[1.5] text-white/80 md:text-[14px]">
           {item.answer}

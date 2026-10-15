@@ -5,7 +5,7 @@ export default function FooterContacts() {
   return (
     <div className="flex flex-col items-center gap-6 md:flex-row md:justify-between md:gap-4">
       
-      {/* Адрес — слева */}
+      
       <div className="flex items-center gap-2">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
           <path
@@ -18,7 +18,7 @@ export default function FooterContacts() {
         </span>
       </div>
 
-      {/* Соцсети — по центру */}
+      
       <div className="flex items-center gap-3">
         {socialLinks.map((social) => (
           <a
@@ -39,7 +39,7 @@ export default function FooterContacts() {
         ))}
       </div>
 
-      {/* Контакты — справа */}
+      
       <div className="flex items-center gap-4">
         <a
           href={footerContacts.whatsapp}

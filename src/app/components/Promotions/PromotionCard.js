@@ -4,7 +4,7 @@ export default function PromotionCard({ promo }) {
   return (
     <div className="group flex h-full flex-col overflow-hidden rounded-[40px] transition-colors">
       
-      {/* Фото — фиксированной высоты */}
+      
       <div className="relative h-[240px] w-full overflow-hidden">
         <Image
           src={promo.image}
@@ -14,7 +14,7 @@ export default function PromotionCard({ promo }) {
         />
       </div>
 
-      {/* Плашка — растягивается на оставшееся место */}
+      
       <div className="relative flex-1 bg-brand-blue p-6 transition-colors duration-300 group-hover:bg-white">
         <h3 className="font-benzin text-[18px] font-bold uppercase leading-[1.1] text-white transition-colors duration-300 group-hover:text-brand-blue md:text-[20px]">
           {promo.titleLines.map((line, index) => (
@@ -27,7 +27,7 @@ export default function PromotionCard({ promo }) {
           {promo.description}
         </p>
 
-        {/* Кружок со стрелкой */}
+        
         <div className="absolute bottom-4 right-4 flex h-[46px] w-[46px] items-center justify-center rounded-full bg-white transition-colors duration-300 group-hover:bg-brand-blue">
           <svg
             width="20"

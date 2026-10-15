@@ -21,12 +21,12 @@ export default function Promotions() {
       <div className="mx-auto flex max-w-[1000px] flex-col gap-6 px-3 md:gap-10 lg:max-w-[1180px]">
         <PromotionsTitle />
 
-        {/* ====== МОБИЛКА: одна карточка + стрелки ====== */}
+        
         <div className="flex flex-col gap-4 md:hidden">
-          {/* Одна карточка по индексу */}
+          
           <PromotionCard promo={promotions[currentIndex]} />
 
-          {/* Кнопки ← → — обе белые с синими стрелками */}
+          
           <div className="flex items-center justify-center gap-3">
             <button
               type="button"
@@ -64,7 +64,7 @@ export default function Promotions() {
           </div>
         </div>
 
-        {/* ====== ПЛАНШЕТ и ДЕСКТОП: сетка ====== */}
+        
         <div className="hidden grid-cols-2 gap-6 md:grid lg:grid-cols-3">
           {promotions.map((promo) => (
             <PromotionCard key={promo.id} promo={promo} />
