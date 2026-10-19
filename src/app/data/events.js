@@ -1,6 +1,7 @@
 export const events = [
   {
     id: 1,
+    slug: "progulka-po-zvezdnomu-nebu",
     image: "/images/events/event-walk.svg",
     age: "7+",
     category: "полнокупольная программа",
@@ -12,6 +13,7 @@ export const events = [
   },
   {
     id: 2,
+    slug: "puteshestvie-po-solnechnoy-sisteme",
     image: "/images/events/event-travel.svg",
     age: "4+",
     category: "детская интерактивная программа",
@@ -23,6 +25,7 @@ export const events = [
   },
   {
     id: 3,
+    slug: "temnaya-astronomiya",
     image: "/images/events/event-dark.svg",
     age: "10+",
     category: "полнокупольная программа",

@@ -1,12 +1,30 @@
+"use client";
+
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function EventCard({ event }) {
-  return (
-    <div className="group -my-4 rounded-[40px] p-4 transition-colors hover:bg-brand-blue">
+  const router = useRouter();
 
+  
+  const handleCardClick = () => {
+    if (event.slug) {
+      router.push(`/events/${event.slug}`);
+    }
+  };
+
+  
+  const handleButtonClick = (e) => {
+    e.stopPropagation(); 
+  };
+
+  return (
+    <div
+      onClick={handleCardClick}
+      className="group -my-4 cursor-pointer rounded-[40px] p-4 transition-colors hover:bg-brand-blue"
+    >
       
       <div className="hidden lg:grid lg:grid-cols-[280px_220px_1fr] lg:items-center lg:gap-6">
-
         
         <div className="relative">
           <Image
@@ -21,7 +39,6 @@ export default function EventCard({ event }) {
           </div>
         </div>
 
-        
         <div className="flex flex-col gap-2">
           <p className="font-gilroy text-[10px] uppercase leading-tight tracking-wide text-white/60">
             {event.category}
@@ -33,7 +50,6 @@ export default function EventCard({ event }) {
           </h3>
         </div>
 
-        
         <div className="flex flex-col gap-4">
           <p className="font-gilroy text-[12px] leading-[1.4] text-white/80">
             {event.description}
@@ -49,6 +65,7 @@ export default function EventCard({ event }) {
             </div>
             <button
               type="button"
+              onClick={handleButtonClick}
               className="ml-auto flex shrink-0 items-center gap-2 rounded-full border border-white/30 px-4 py-1.5 font-gilroy text-[12px] text-white/70 transition-colors hover:border-white/60 hover:text-white group-hover:border-white group-hover:text-white"
             >
               Выбрать дату
@@ -58,6 +75,7 @@ export default function EventCard({ event }) {
             </button>
             <button
               type="button"
+              onClick={handleButtonClick}
               className="shrink-0 rounded-full bg-brand-blue px-5 py-1.5 font-gilroy text-[12px] font-bold text-white transition-colors hover:opacity-90 group-hover:bg-white group-hover:text-brand-blue"
             >
               Купить билет
@@ -69,7 +87,6 @@ export default function EventCard({ event }) {
       
       <div className="flex flex-col gap-4 lg:hidden">
 
-        
         <div className="flex flex-col gap-4 md:flex-row md:items-start md:gap-6">
           <div className="relative shrink-0">
             <Image
@@ -95,12 +112,10 @@ export default function EventCard({ event }) {
           </div>
         </div>
 
-        
         <p className="font-gilroy text-[12px] leading-[1.4] text-white/80">
           {event.description}
         </p>
 
-        
         <div className="flex flex-wrap items-center gap-3">
           <div className="flex shrink-0 items-center gap-2">
             <Image src="/images/events/icon-child.svg" alt="Ребёнок" width={20} height={20} />
@@ -112,6 +127,7 @@ export default function EventCard({ event }) {
           </div>
           <button
             type="button"
+            onClick={handleButtonClick}
             className="ml-auto flex shrink-0 items-center gap-2 rounded-full border border-white/30 px-4 py-1.5 font-gilroy text-[12px] text-white/70 transition-colors"
           >
             Выбрать дату
@@ -121,6 +137,7 @@ export default function EventCard({ event }) {
           </button>
           <button
             type="button"
+            onClick={handleButtonClick}
             className="shrink-0 rounded-full bg-brand-blue px-5 py-1.5 font-gilroy text-[12px] font-bold text-white transition-colors hover:opacity-90"
           >
             Купить билет

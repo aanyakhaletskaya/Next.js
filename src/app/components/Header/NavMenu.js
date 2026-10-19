@@ -1,6 +1,8 @@
+import Link from "next/link";
+
 const links = [
   { label: "Главная", href: "/" },
-  { label: "События", href: "/events" },
+  { label: "События", href: "/events" }, 
   { label: "Акции", href: "/promo" },
   { label: "Отзывы", href: "/reviews" },
   { label: "FAQ", href: "/faq" },
@@ -13,12 +15,12 @@ export default function NavMenu() {
       <ul className="flex items-center gap-7">
         {links.map((link) => (
           <li key={link.href}>
-            <a
+            <Link
               href={link.href}
               className="text-[13px] text-white/80 transition-colors hover:text-white"
             >
               {link.label}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>

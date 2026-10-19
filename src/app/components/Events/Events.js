@@ -4,7 +4,7 @@ import EventCard from "./EventCard";
 import ShowMoreButton from "./ShowMoreButton";
 import { events } from "@/app/data/events";
 
-export default function Events() {
+export default function Events({ isPage = false }) {
   return (
     <section className="w-full bg-brand-dark py-10 md:py-16">
       <div className="mx-auto flex max-w-[1000px] flex-col gap-6 px-3 lg:max-w-[1180px]">
@@ -15,7 +15,9 @@ export default function Events() {
           {events.map((event, index) => (
             <div
               key={event.id}
-              className={index === 0 ? "" : "hidden md:block"}
+              
+              
+              className={isPage || index === 0 ? "" : "hidden md:block"}
             >
               <EventCard event={event} />
             </div>
