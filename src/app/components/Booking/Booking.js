@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import emailjs from "@emailjs/browser"; // ← Импорт EmailJS
 
 export default function Booking() {
   const [formData, setFormData] = useState({
@@ -41,8 +42,33 @@ export default function Booking() {
     }
 
     setErrors({});
-    alert("Спасибо! Мы свяжемся с вами для подтверждения.");
-    setFormData({ name: "", phone: "", date: "" });
+
+    // Данные, которые полетят в письмо
+    const templateParams = {
+      name: formData.name,
+      phone: formData.phone,
+      date: formData.date,
+    };
+
+    // Отправка через EmailJS
+    emailjs
+      .send(
+        "service_x7ailv7",         // Твой Service ID
+        "template_6a8a35u",        // Твой Template ID
+        templateParams,
+        { publicKey: "YQdVnq6ks2XvffPKt" } // Твой Public Key
+      )
+      .then(
+        (response) => {
+          console.log("SUCCESS!", response.status, response.text);
+          alert("Спасибо! Мы свяжемся с вами для подтверждения.");
+          setFormData({ name: "", phone: "", date: "" });
+        },
+        (error) => {
+          console.error("FAILED...", error);
+          alert("Ошибка при отправке. Попробуйте позже.");
+        }
+      );
   };
 
   const handleChange = (field, value) => {
